@@ -9,17 +9,19 @@
 :root {
     --ff-primary: 'Encode Sans SC', sans-serif;
     --ff-secondary: 'Noto Sans JP', sans-serif;
+    --ff-job: 'Courgette', cursive;
 
     --fw-reg: 300;
     --fw-bold: 900;
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #5eeee7;
+    --clr-accent: #28f5f5;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
+    --fs-h4: 1.25rem;
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
@@ -30,6 +32,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
+        --fs-h4: 1.5rem;
         --fs-body: 1.125rem;
     }
 }
@@ -60,10 +63,11 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+/*
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 2px;
-}
+}*/
 
 /* Buttons */
 
@@ -87,7 +91,7 @@ strong { font-weight: var(--fw-bold) }
 
 /* Typography */
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     line-height: 1;
     margin: 0;
 }
@@ -95,6 +99,10 @@ h1, h2, h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+h4 { 
+    font-size: var(--fs-h4);
+    font-family: var(--ff-job);
+}
 
 .section__title {
     margin-bottom: .25em;
@@ -109,8 +117,16 @@ h3 { font-size: var(--fs-h3) }
     font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro, .section__subtitle--about {
+.section__subtitle--intro {
     background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.section__subtitle--about {
+    background: var(--clr-dark);
+    color: var(--clr-light);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -130,10 +146,6 @@ header {
     padding: 1em;
 }
 
-.logo {
-    max-width: 100px;
-}
-
 .nav { 
     position: fixed;
     background: var(--clr-dark);
@@ -143,6 +155,7 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
+    /* opacity: 98%; */
 
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -208,7 +221,7 @@ header {
 
 .menu, .menu::before, .menu::after {
     background: var(--clr-accent);
-    width: 2em;
+    width: 3em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
@@ -272,6 +285,7 @@ header {
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    background-color: var(--clr-accent);
 }
 
 .about-me__img {
@@ -313,9 +327,9 @@ header {
 /* Resume */
 .resume {
     background-color: var(--clr-dark);
-    background-image: url(../img/background.jfif);
+    /* background-image: url(../img/background.jfif);
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
 }
@@ -336,32 +350,63 @@ header {
 }
 
 .job {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.job::after {
+    content: '';
+    display: block;
+    width: 10em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
 }
 
 .jobs {
     margin-bottom: 4em;
 }
 
+.job--title {
+    padding: 1em;
+}
+
+.education::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+.education {
+    margin-bottom: 4em;
+}
+
+.education--title {
+    padding: 1em;
+}
+
 @media (min-width: 800px) {
     .jobs {
-        display: flex;
-        max-width: 1000px;
+        /* display: flex; */
+        /* max-width: 1000px; */
         margin-left: auto;
         margin-right: auto;
     }
 
-    .job + .job {
+    /* .job + .job {
         margin-left: 2em;
-    }
+    } */
 }
 
 /* Works */
 
 .works {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
     text-align: center;
 }
 
