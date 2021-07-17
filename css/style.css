@@ -167,9 +167,9 @@ header {
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: left;
     margin: 0;
-    padding: 0;
+    padding-left: 3em;
 }
 
 .nav__link {
@@ -195,7 +195,18 @@ header {
 }
 
 .nav-open .nav {
-    transform: translateX(0);
+    transform: translateX(80%);
+}
+
+@media (max-width: 1000px) {
+    .nav-open .nav {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        align-items: center;
+        padding-left: 0;
+    }
 }
 
 .nav-open .nav-toggle {
@@ -350,7 +361,7 @@ header {
 }
 
 .job {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
