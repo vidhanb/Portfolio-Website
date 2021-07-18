@@ -13,7 +13,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap" rel="stylesheet">
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
@@ -79,56 +83,65 @@
         <!-- Resume -->
         <section class="resume" id="res">
             <h2 class="section__title section__title--resume">Resume</h2>
+            <h5 class="section__subtitle section__subtitle--resume"><u>Education</u></h5>
             <div class="education">
-                <h3>The Ohio State Univserity</h3>
-                <h4 class="education--title">B.S. Computer Science and Engineering | Minor: Political Science | May 2022</h4>
-                <p>
-                    <strong>Relevant coursework:</strong> Data Structures and Algorithms, Databases, Computer Networking, Artificial Intelligence, Operating Systems, Linear Algebra
-                </p>
+                <div class="school">
+                    <h3 class="headings">The Ohio State Univserity</h3>
+                    <h4 class="education--title">B.S. Computer Science and Engineering | Minor: Political Science | May 2022</h4>
+                    <p class = "education__description">
+                        <strong>Relevant coursework:</strong> Data Structures and Algorithms, Databases, Computer Networking, Artificial Intelligence, Operating Systems, Linear Algebra
+                    </p>
+                </div>
             </div>
+            <h5 class="section__subtitle section__subtitle--resume"><u>Professional Experience</u></h5>
             <div class="jobs">
                 <!-- Junior Internship -->
                 <div class="job">
-                    <h3>Texas Instruments</h3> <h4 class="job--title">Firmware Engineer Intern | Jun 2021 - Aug 2021</h4>
-                    <p>
-                        ▪ Implemented a new feature for development tools to support importing MSFT JSON configuration files through parsing
-                        in them in Python.
-                        ▪ Developed a VS Code like command palette for an internal development tool utilizing Qt in Python, improving the 
-                        efficiency of the tool.
-                        ▪ Integrated MSFT JSON compatibility to the core of development tools to allow the user to directly interact with the
-                        contents of the files through the tool.
-                        ▪ Worked and communicated effectively with a team in an unforeseen virtual environment.
+                    <h3 class="headings">Texas Instruments</h3> <h4 class="job--title">Firmware Engineer Intern | Jun 2021 - Aug 2021</h4>
+                    <p class="job--description">
+                        Currently in progress.
                     </p>
                 </div>
 
                 <!-- Sophomore Internship -->
                 <div class="job">
-                    <h3>Texas Instruments</h3> <h4 class="job--title">Software Engineer Intern | Jun 2020 - Aug 2020</h4>
-                    <p>
-                        ▪ Implemented a new feature for development tools to support importing MSFT JSON configuration files through parsing
-                        in them in Python, allowing for a better user experience.
-                        ▪ Developed a VS Code like command palette for an internal development tool utilizing Qt in Python, improving the 
-                        efficiency of the tool.
-                        ▪ Integrated MSFT JSON compatibility to the core of development tools to allow the user to directly interact with the
-                        contents of the files through the tool.
-                        ▪ Worked and communicated effectively with a team in an unforeseen virtual environment.
+                    <h3 class="headings">Texas Instruments</h3> <h4 class="job--title">Software Engineer Intern | Jun 2020 - Aug 2020</h4>
+                    <p class="job--description">
+                        Implemented a new feature for development tools to support importing MSFT JSON configuration files through parsing
+                        in them in Python, allowing for a better user experience.<br><br>
+                        Developed a VS Code like command palette for an internal development tool utilizing Qt in Python, improving the 
+                        efficiency of the tool.<br><br>
+                        Integrated MSFT JSON compatibility to the core of development tools to allow the user to directly interact with the
+                        contents of the files through the tool.<br><br>
+                        Worked and communicated effectively with a team in an unforeseen virtual environment.
                     </p>
                 </div>
 
                 <!-- Freshman Internship -->
-                <div class="job">
-                    <h3>Siemens</h3> <h4 class="job--title">Software Development Intern | May 2019 - Aug 2019</h4>
-                    <p>
-                        ▪ Developed a framework for customers which allows them to customize the UX and UI of the application’s grid 
-                        widget through AngularJS.
-                        ▪ Implemented the last key feature which allowed full adoption of the company’s home-grown widget, resulting in 
-                        better performance and usability across the application.
-                        ▪ Investigated defects in Active Workspace and resolved them by successfully submitting code fixes for the application’s 
-                        next release.
-                        ▪ Worked with a global development team in an AGILE environment. This included participating in stand-ups, iteration 
+                <div class="job job__last">
+                    <h3 class="headings">Siemens</h3> <h4 class="job--title">Software Development Intern | May 2019 - Aug 2019</h4>
+                    <p class="job--description">
+                        Developed a framework for customers which allows them to customize the UX and UI of the application’s grid 
+                        widget through AngularJS. <br><br>
+                        Implemented the last key feature which allowed full adoption of the company’s home-grown widget, resulting in 
+                        better performance and usability across the application. <br><br>
+                        Investigated defects in Active Workspace and resolved them by successfully submitting code fixes for the application’s 
+                        next release.<br><br>
+                        Worked with a global development team in an AGILE environment. This included participating in stand-ups, iteration 
                         demos, a hackathon, and retrospectives.
                     </p>
                 </div>
+            </div>
+            <h5 class="section__subtitle section__subtitle--resume"><u>Skills</u></h5>
+            <div class="skills">
+                <h3 class="skills--title">Programming</h3>
+                <p>
+                    Python, Java, Javascript, C, C++, C#, Assembly(x86-64)
+                </p>
+                <h3 class="skills--title">Tools/Frameworks</h3>
+                <p>
+                    JSON, XML, HTML/CSS, SQL, Node, Git, Jenkins, SolidWorks, MATLAB, Jira, BitBucket
+                </p>
             </div>
 
             <a href="https://www.linkedin.com/in/vidhan-bhardwaj/" target="_blank" class="btn">LinkedIn</a>

@@ -7,9 +7,10 @@
 /* Custom Properties, need to update some later */
 
 :root {
-    --ff-primary: 'Encode Sans SC', sans-serif;
+    --ff-primary: 'Roboto', sans-serif;
     --ff-secondary: 'Noto Sans JP', sans-serif;
     --ff-job: 'Courgette', cursive;
+    --ff-resume: 'Encode Sans SC', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -23,6 +24,7 @@
     --fs-h3: 1.25rem;
     --fs-h4: 1.25rem;
     --fs-body: 1rem;
+    --fs-resume: 1.75rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
@@ -34,6 +36,7 @@
         --fs-h3: 1.5rem;
         --fs-h4: 1.5rem;
         --fs-body: 1.125rem;
+        --fs-resume: 2.25rem;
     }
 }
 
@@ -103,6 +106,10 @@ h4 {
     font-size: var(--fs-h4);
     font-family: var(--ff-job);
 }
+h5{
+    font-size: var(--fs-resume);
+    font-family: var(--ff--resume);
+}
 
 .section__title {
     margin-bottom: .25em;
@@ -138,6 +145,13 @@ h4 {
     text-align: 2em;
 }
 
+.section__subtitle--resume {
+    font-weight: var(--fw-bold);
+    text-align: 2em;
+    font-size: var(--fs-resume);
+    font-family: var(--ff-resume);
+}
+
 /* Header */
 
 header {
@@ -169,7 +183,7 @@ header {
     justify-content: space-evenly;
     align-items: left;
     margin: 0;
-    padding-left: 3em;
+    padding-left: 2em;
 }
 
 .nav__link {
@@ -198,7 +212,7 @@ header {
     transform: translateX(80%);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1650px) {
     .nav-open .nav {
         transform: translateX(0);
     }
@@ -360,7 +374,7 @@ header {
     opacity: 0.5;
 }
 
-.job {
+.job, .school {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -375,28 +389,38 @@ header {
     opacity: 0.5;
 }
 
-.jobs {
+.job__last::after{
+    content: none;
+}
+
+.education, .jobs {
     margin-bottom: 4em;
 }
 
-.job--title {
+.job--description {
+    text-align: left;
+}
+
+.job--title, .education--title, .skills--title {
     padding: 1em;
 }
 
-.education::after {
+.skills--title {
+    color: var(--clr-accent);
+}
+
+.education::after, .jobs::after {
     content: '';
     display: block;
     height: 1px;
     margin: 0.5em auto 1em;
     background: currentColor;
     opacity: 0.5;
+    width: 100%;
 }
 
-.education {
-    margin-bottom: 4em;
-}
-
-.education--title {
+.headings {
+    color: var(--clr-accent);
     padding: 1em;
 }
 
@@ -407,10 +431,6 @@ header {
         margin-left: auto;
         margin-right: auto;
     }
-
-    /* .job + .job {
-        margin-left: 2em;
-    } */
 }
 
 /* Works */
@@ -499,6 +519,11 @@ header {
 
 .portfolio-item-individual p {
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame{
     margin-left: auto;
     margin-right: auto;
 }
